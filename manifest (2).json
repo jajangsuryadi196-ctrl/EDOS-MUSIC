@@ -1,0 +1,13 @@
+{
+  "background_color": "#0d0d14",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "EDOS MUSIC",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "EDOS MUSIC",
+  "start_url": "/",
+  "theme_color": "#1db954",
+  "id": "edosmusic",
+  "description": "Platform musik pribadi EDOS MUSIC"
+}
