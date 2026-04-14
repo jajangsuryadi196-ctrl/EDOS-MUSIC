@@ -1,17 +1,16 @@
 // EDOS MUSIC Service Worker
-// Versi cache — naikkan angka ini setiap kali update app
-const CACHE_NAME = 'edosmusic-v2';
+const CACHE_NAME = 'edosmusic-v3';
 
-// File yang di-cache untuk offline
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.json',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './screenshot-narrow.png',
+  './screenshot-wide.png'
 ];
 
-// Install: cache semua aset utama
 self.addEventListener('install', (event) => {
   console.log('[SW] Installing...');
   event.waitUntil(
@@ -24,7 +23,6 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate: hapus cache lama
 self.addEventListener('activate', (event) => {
   console.log('[SW] Activating...');
   event.waitUntil(
@@ -41,16 +39,14 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch: Cache-first strategy untuk aset lokal, Network-first untuk API
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
-  // Skip untuk Google API dan request non-GET
   if (event.request.method !== 'GET') return;
   if (url.hostname.includes('google') || url.hostname.includes('googleapis')) return;
   if (url.hostname.includes('anthropic')) return;
+  if (url.hostname.includes('youtube') || url.hostname.includes('ytimg')) return;
 
-  // Untuk file HTML dan manifest: Network-first (selalu ambil terbaru jika online)
   if (url.pathname.endsWith('.html') || url.pathname.endsWith('manifest.json')) {
     event.respondWith(
       fetch(event.request)
@@ -64,7 +60,6 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Untuk aset lain: Cache-first
   event.respondWith(
     caches.match(event.request)
       .then(cached => {
@@ -78,7 +73,6 @@ self.addEventListener('fetch', (event) => {
         });
       })
       .catch(() => {
-        // Offline fallback
         return new Response('Offline - EDOSMUSIC tidak tersedia tanpa koneksi internet', {
           headers: { 'Content-Type': 'text/plain' }
         });
@@ -86,14 +80,12 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// Background sync untuk saat offline
 self.addEventListener('sync', (event) => {
   if (event.tag === 'sync-music') {
     console.log('[SW] Background sync triggered');
   }
 });
 
-// Push notification support
 self.addEventListener('push', (event) => {
   const data = event.data ? event.data.json() : {};
   self.registration.showNotification(data.title || 'EDOS MUSIC', {
