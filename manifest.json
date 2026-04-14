@@ -1,10 +1,10 @@
 {
-  "id": "/",
+  "id": "edos-music-app",
   "name": "EDOS MUSIC",
   "short_name": "EDOS MUSIC",
   "description": "Platform musik pribadi untuk semua orang — nikmati musik favoritmu kapan saja",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/EDOS-MUSIC/index.html",
+  "scope": "/EDOS-MUSIC/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "background_color": "#0d0d14",
@@ -16,38 +16,27 @@
   "prefer_related_applications": false,
   "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
   "related_applications": [],
-  "protocol_handlers": [],
-  "file_handlers": [],
-  "share_target": {
-    "action": "./index.html",
-    "method": "GET",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url"
-    }
-  },
   "icons": [
     {
-      "src": "icon-192.png",
+      "src": "/EDOS-MUSIC/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-192.png",
+      "src": "/EDOS-MUSIC/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "icon-512.png",
+      "src": "/EDOS-MUSIC/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "/EDOS-MUSIC/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -55,14 +44,14 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot-narrow.png",
+      "src": "/EDOS-MUSIC/screenshot-narrow.png",
       "sizes": "540x720",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "EDOS MUSIC - Home"
     },
     {
-      "src": "screenshot-wide.png",
+      "src": "/EDOS-MUSIC/screenshot-wide.png",
       "sizes": "720x540",
       "type": "image/png",
       "form_factor": "wide",
@@ -73,10 +62,10 @@
     {
       "name": "Cari Lagu",
       "short_name": "Search",
-      "url": "./index.html#search",
+      "url": "/EDOS-MUSIC/index.html#search",
       "icons": [
         {
-          "src": "icon-192.png",
+          "src": "/EDOS-MUSIC/icon-192.png",
           "sizes": "192x192",
           "type": "image/png",
           "purpose": "any"
@@ -86,10 +75,10 @@
     {
       "name": "Library Saya",
       "short_name": "Library",
-      "url": "./index.html#library",
+      "url": "/EDOS-MUSIC/index.html#library",
       "icons": [
         {
-          "src": "icon-192.png",
+          "src": "/EDOS-MUSIC/icon-192.png",
           "sizes": "192x192",
           "type": "image/png",
           "purpose": "any"
