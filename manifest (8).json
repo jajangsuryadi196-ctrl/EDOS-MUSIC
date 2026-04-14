@@ -1,0 +1,94 @@
+{
+  "id": "edos-music-app",
+  "name": "EDOS MUSIC",
+  "short_name": "EDOS MUSIC",
+  "description": "Platform musik pribadi untuk semua orang — nikmati musik favoritmu kapan saja",
+  "start_url": "/EDOS-MUSIC/index.html",
+  "scope": "/EDOS-MUSIC/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#0d0d14",
+  "theme_color": "#1db954",
+  "orientation": "portrait-primary",
+  "categories": [
+    "music",
+    "entertainment"
+  ],
+  "lang": "id",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+  "icons": [
+    {
+      "src": "/EDOS-MUSIC/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/EDOS-MUSIC/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/EDOS-MUSIC/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/EDOS-MUSIC/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/EDOS-MUSIC/screenshot-narrow.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "EDOS MUSIC - Home"
+    },
+    {
+      "src": "/EDOS-MUSIC/screenshot-wide.png",
+      "sizes": "720x540",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "EDOS MUSIC - Player"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Cari Lagu",
+      "short_name": "Search",
+      "url": "/EDOS-MUSIC/index.html#search",
+      "icons": [
+        {
+          "src": "/EDOS-MUSIC/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "Library Saya",
+      "short_name": "Library",
+      "url": "/EDOS-MUSIC/index.html#library",
+      "icons": [
+        {
+          "src": "/EDOS-MUSIC/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    }
+  ]
+}
